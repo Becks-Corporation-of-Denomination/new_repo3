@@ -1,0 +1,25 @@
+---
+title: "Diamonds_Push"
+author: "Barbara Broussard, Alice Havard"
+date: "2024-02-20"
+output: html_document
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+
+```{r}
+# Diamonds
+library(tidyverse)
+head(diamonds)
+#use dplyr commands to create a date table
+# that shows columns price, x, y, z. Also price
+# values should be greater than 17000
+
+diamonds %>%
+  select(price, x, y,z) %>%
+  filter (price > 17000)
+```
+
